@@ -3,7 +3,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 
-@Entity
+@Entity //Class meri Table
 public class Country {
     @Id
     private String code;

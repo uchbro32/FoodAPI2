@@ -14,13 +14,15 @@ public class CountryController {
     @Autowired
     CountryServices tmp;
 //ResponseEntity
+
+    //
     @RequestMapping("/")
     public ResponseEntity<List<Country>> mi(){
         List<Country> temp = tmp.FindingAll();
         if(temp.isEmpty()){
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(temp);
+        return ResponseEntity.ok(temp); //OK - 200
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/create")
